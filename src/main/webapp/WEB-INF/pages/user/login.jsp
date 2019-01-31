@@ -39,17 +39,17 @@
     <script>
         $(function(){
             $(".login_btn").click(function(){
-                window.location.href = "/main.html";
+                window.location.href = "/user/userAction_login.action";
             });
         });
     </script>
 </head>
 <body style="background-image: url(/img/oa_login.jpg);background-repeat:no-repeat;">
 <div align="center">
-    <img src="img/oa_title.png"/>
+    <img src="/img/oa_title.png"/>
 </div>
 <div align="center" style="padding-top: 325px;">
-    <form>
+    <%--<form>--%>
         <div class="input_div">
             <input name="userName" type="text" placeholder="用户名" class="text"/>
         </div>
@@ -59,7 +59,7 @@
         <div>
             <button class="login_btn"></button>
         </div>
-    </form>
+    <%--</form>--%>
 </div>
 </body>
 </html>
