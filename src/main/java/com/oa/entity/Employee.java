@@ -1,6 +1,7 @@
 package com.oa.entity;
 
 import javax.persistence.*;
+import java.util.Date;
 
 /**
  * Created by zonly on 2019/1/30.
@@ -12,6 +13,8 @@ public class Employee {
     private String userName;
     private String password;
     private String email;
+    private Date hiredate;
+    private String userCode;
 
     @Id
     @Column(name = "id")
@@ -47,6 +50,22 @@ public class Employee {
     @Column(name = "email")
     public String getEmail() {
         return email;
+    }
+
+    public String getUserCode() {
+        return userCode;
+    }
+
+    public void setUserCode(String userCode) {
+        this.userCode = userCode;
+    }
+
+    public Date getHiredate() {
+        return hiredate;
+    }
+
+    public void setHiredate(Date hiredate) {
+        this.hiredate = hiredate;
     }
 
     public void setEmail(String email) {

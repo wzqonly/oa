@@ -21,7 +21,8 @@
 </style>
 <!-- 浮动窗口样式css end -->
 <body>
-<div id="welcome" class="content" style="display:block;">
+<jsp:include page="rightTop.jsp"/>
+<div id="welcome"  style="display:block;">
     <div align="center">
         <p>&nbsp;</p>
         <p style="font-family: '微软雅黑';font-size: 38px;"><strong>欢迎使用OA自动化办公系统！</strong></p>

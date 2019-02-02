@@ -67,7 +67,7 @@
     <div id="left_menu"></div>
     <div id="leftMenu">
         <ul>
-            <li><a href="welcome.html" target="homeFrame">首页</a></li>
+            <li><a href="/home/homeAction_welcome.action" target="homeFrame">首页</a></li>
             <li>
                 <a>系统管理</a>&nbsp;&nbsp;
                 <span style="min-width: 13px;">&nbsp;&nbsp;</span>
@@ -83,7 +83,7 @@
                 <a class="parentMenu">用户管理</a>&nbsp;&nbsp;
                 <span class='pull-right'> + </span>
                 <div style="background-color: #DCDCDC;display: none;">
-                    <p><a href="right.html" id="1" target="homeFrame">用户列表</a></p>
+                    <p><a href="/user/userAction_list.action" id="1" target="homeFrame">用户列表</a></p>
                 </div>
             </li>
             <li>

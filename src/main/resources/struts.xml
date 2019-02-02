@@ -5,11 +5,15 @@
         "http://struts.apache.org/dtds/struts-2.3.dtd">
 
 <struts>
-    <package name="user" namespace="/user" extends="struts-default">
+    <package name="user" namespace="/user" extends="struts-default,json-default">
         <action name="userAction_*" class="userAction" method="{1}">
             <result name="success">/WEB-INF/pages/home/index.jsp</result>
             <result name="input">/WEB-INF/pages/user/login.jsp</result>
             <result name="loginout">/WEB-INF/pages/user/login.jsp</result>
+            <result name="list">/WEB-INF/pages/user/list.jsp</result>
+            <result name="message" type="json">
+                <param name="root">result</param>
+            </result>
         </action>
     </package>
 

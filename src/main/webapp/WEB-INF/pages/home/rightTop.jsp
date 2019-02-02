@@ -6,11 +6,22 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title>Title</title>
-    <link href="/css/main.css" rel="stylesheet" type="text/css" />
-</head>
+
+<link href="/css/main.css" rel="stylesheet" type="text/css" />
+<link href="/css/main.css" rel="stylesheet" type="text/css" />
+<link href="/css/myplus/dialog.css" rel="stylesheet" type="text/css" />
+<script src="/js/jquery.min.1.8.2.js"></script>
+<script src="/js/myplus/dialog.js"></script>
+<script>
+    $(document).ready(function(){
+        $(".logintext").click(function(){
+            myalert("确定退出系统吗?");
+            $(".confirm").click(function(){
+                top.location.href = "/user/userAction_loginout.action";
+            });
+        });
+    });
+</script>
 <style>
     #right_font{
         padding-left: 20px;
@@ -87,7 +98,7 @@
     });
 </script>
 
-<body>
+
 <div id="right_top">
     <div id="img"><img class="img" src="/img/home/close.gif" /></div>
     <span class="imgtext">关闭左栏</span>
@@ -97,5 +108,3 @@
     </div>
 </div>
 <div id="right_font"></div>
-</body>
-</html>

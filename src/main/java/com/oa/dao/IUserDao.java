@@ -1,5 +1,6 @@
 package com.oa.dao;
 
+import com.oa.domain.PageInfo;
 import com.oa.entity.Employee;
 
 import java.util.List;
@@ -10,4 +11,8 @@ import java.util.List;
 public interface IUserDao {
 
     List<Employee> findEmpByCondition(Employee employee);
+
+    boolean insertEmployee(Employee employee);
+
+    List<Employee> findEmpList(PageInfo pageInfo);
 }

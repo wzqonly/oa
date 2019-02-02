@@ -1,10 +1,13 @@
 package com.oa.dao.impl;
 
 import com.oa.dao.IUserDao;
+import com.oa.domain.PageInfo;
 import com.oa.entity.Employee;
+import com.oa.util.MD5keyUtil;
 import org.hibernate.SessionFactory;
-import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
+import org.springframework.orm.hibernate4.support.HibernateDaoSupport;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
 
 import javax.annotation.Resource;
@@ -39,6 +42,34 @@ public class UserDaoImpl extends HibernateDaoSupport implements IUserDao {
             return null;
         }
 
+    }
+
+    @Override
+    @Transactional
+    public boolean insertEmployee(Employee employee) {
+        try{
+            //生成员工编号
+            employee.setUserCode("20190202123");
+            //初始化密码123456
+            MD5keyUtil md5 = new MD5keyUtil();
+            employee.setPassword(md5.getkeyBeanofStr("123456"));
+            getHibernateTemplate().save(employee);
+            return true;
+        }catch (Exception e){
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    @Override
+    public List<Employee> findEmpList(PageInfo pageInfo) {
+        List<Employee> list = null;
+        try{
+            list = (List<Employee>) getHibernateTemplate().find("from Employee where 1=1");
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return list;
     }
 
 

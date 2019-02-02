@@ -1,3 +1,13 @@
+.model_bg{
+    position:fixed;
+    top:0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0,0,0,.6); /*#808080*/
+    z-index: 999;
+    display: none;
+}
 .mark {
     display: none;
     position: fixed;
@@ -14,6 +24,7 @@
     background: #FFFFFF;
     border: 3px #EEEEEE solid;
     border-radius: 0.1rem;
+    z-index: 1000;
 }
 .title{
     background: #385B70;
