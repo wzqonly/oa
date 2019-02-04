@@ -132,7 +132,7 @@
            /* $("tr.add td:eq(1)").text("新增");*/
 
             //清空文本框数据
-            $("tr.opeartorInput td input").val("").removeClass("validate");
+            $("tr.opeartorInput td input").attr("placeholder","").removeClass("validate");
         }
 
         function checkUserNameInput(userName){
