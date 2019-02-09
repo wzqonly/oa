@@ -57,13 +57,13 @@
             color: darkred;
         }
     </style>
-    <link rel="stylesheet" href="/js/layui-v2.4.5/layui/css/layui.css" />
-    <link href="/css/myplus/dialog.css" rel="stylesheet" type="text/css" />
-    <link href="/css/message.css" rel="stylesheet" type="text/css" />
-    <script src="/js/jquery.min.1.8.2.js"></script>
-    <script src="/js/myplus/dialog.js"></script>
-    <script src="/js/layui-v2.4.5/layui/layui.js" charset="utf-8"></script>
-    <script src="/js/message.js"></script>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/js/layui-v2.4.5/layui/css/layui.css" />
+    <link href="${pageContext.request.contextPath}/css/myplus/dialog.css" rel="stylesheet" type="text/css" />
+    <link href="${pageContext.request.contextPath}/css/message.css" rel="stylesheet" type="text/css" />
+    <script src="${pageContext.request.contextPath}/js/jquery.min.1.8.2.js"></script>
+    <script src="${pageContext.request.contextPath}/js/myplus/dialog.js"></script>
+    <script src="${pageContext.request.contextPath}/js/layui-v2.4.5/layui/layui.js" charset="utf-8"></script>
+    <script src="${pageContext.request.contextPath}/js/message.js"></script>
     <script>
         layui.use('laydate', function() {
             var laydate = layui.laydate;
@@ -120,7 +120,7 @@
                     success:function(data){
                         $.message(data.message);
                         if(data.success == true){
-                            window.location.href = "/user/userAction_list.action";
+                            window.location.href = "${pageContext.request.contextPath}/user/userAction_list.action";
                         }
                     }
                 });

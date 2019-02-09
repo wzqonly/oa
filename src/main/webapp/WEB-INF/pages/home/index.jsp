@@ -11,14 +11,14 @@
     <title>OA自动化办公系统</title>
 </head>
 <frameset rows="60,*" cols="*" frameborder="no" border="0" framespacing="0">
-    <frame src="/home/homeAction_top.action" name="topFrame" scrolling="No" noresize="noresize" id="topFrame" />
+    <frame src="${pageContext.request.contextPath}/home/homeAction_top.action" name="topFrame" scrolling="No" noresize="noresize" id="topFrame" />
     <frameset id="main" rows="*" cols="188,*" framespacing="0" frameborder="no" border="0">
-        <frame src="/home/homeAction_left.action" name="leftFrame" scrolling="No" noresize="noresize" id="leftFrame" />
+        <frame src="${pageContext.request.contextPath}/home/homeAction_left.action" name="leftFrame" scrolling="No" noresize="noresize" id="leftFrame" />
         <%--<frameset rows="73,*" cols="*">
             <frame src="/home/homeAction_rightTop.action" name="mainFrame" id="mainFrame" />
             <frame src="/home/homeAction_welcome.action" id="homeFrame" name="homeFrame" />
         </frameset>--%>
-        <frame src="/home/homeAction_welcome.action" id="homeFrame" name="homeFrame" />
+        <frame src="${pageContext.request.contextPath}/home/homeAction_welcome.action" id="homeFrame" name="homeFrame" />
     </frameset>
 </frameset>
 <noframes><body>

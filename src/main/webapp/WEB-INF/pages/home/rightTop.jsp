@@ -7,11 +7,11 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
-<link href="/css/main.css" rel="stylesheet" type="text/css" />
-<link href="/css/main.css" rel="stylesheet" type="text/css" />
-<link href="/css/myplus/dialog.css" rel="stylesheet" type="text/css" />
-<script src="/js/jquery.min.1.8.2.js"></script>
-<script src="/js/myplus/dialog.js"></script>
+<link href="${pageContext.request.contextPath}/css/main.css" rel="stylesheet" type="text/css" />
+<link href="${pageContext.request.contextPath}/css/main.css" rel="stylesheet" type="text/css" />
+<link href="${pageContext.request.contextPath}/css/myplus/dialog.css" rel="stylesheet" type="text/css" />
+<script src="${pageContext.request.contextPath}/js/jquery.min.1.8.2.js"></script>
+<script src="${pageContext.request.contextPath}/js/myplus/dialog.js"></script>
 <script>
     $(document).ready(function(){
         $(".logintext").click(function(){
@@ -61,7 +61,7 @@
     }
 
 </style>
-<script src="/js/jquery.min.1.8.2.js"></script>
+<script src="${pageContext.request.contextPath}/js/jquery.min.1.8.2.js"></script>
 <script>
     $(document).ready(function() {
         $(".img,.imgtext").click(function() {
@@ -100,10 +100,10 @@
 
 
 <div id="right_top">
-    <div id="img"><img class="img" src="/img/home/close.gif" /></div>
+    <div id="img"><img class="img" src="${pageContext.request.contextPath}/img/home/close.gif" /></div>
     <span class="imgtext">关闭左栏</span>
     <div id="loginout">
-        <div id="loginoutimg"><img src="/img/home/loginout.gif" /></div>
+        <div id="loginoutimg"><img src="${pageContext.request.contextPath}/img/home/loginout.gif" /></div>
         <span class="logintext">退出系统</span>
     </div>
 </div>

@@ -44,9 +44,9 @@
         });
     </script>
 </head>
-<body style="background-image: url(/img/oa_login.jpg);background-repeat:no-repeat;">
+<body style="background-image: url(${pageContext.request.contextPath}/img/oa_login.jpg);background-repeat:no-repeat;">
 <div align="center">
-    <img src="/img/oa_title.png"/>
+    <img src="${pageContext.request.contextPath}/img/oa_title.png"/>
 </div>
 <div align="center" style="padding-top: 325px;">
     <%--<form>--%>

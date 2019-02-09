@@ -9,7 +9,7 @@
 <html>
 <head>
     <title></title>
-    <link href="/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="${pageContext.request.contextPath}/css/main.css" rel="stylesheet" type="text/css" />
 </head>
 <style>
     #leftMenu ul{
@@ -45,7 +45,7 @@
         font-weight: bolder;
     }
 </style>
-<script type="text/javascript" src="/js/jquery.min.1.8.2.js" ></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery.min.1.8.2.js" ></script>
 <script>
     $(document).ready(function(){
         $('.parentMenu').on('click',function(){
@@ -67,7 +67,7 @@
     <div id="left_menu"></div>
     <div id="leftMenu">
         <ul>
-            <li><a href="/home/homeAction_welcome.action" target="homeFrame">首页</a></li>
+            <li><a href="${pageContext.request.contextPath}/home/homeAction_welcome.action" target="homeFrame">首页</a></li>
             <li>
                 <a>系统管理</a>&nbsp;&nbsp;
                 <span style="min-width: 13px;">&nbsp;&nbsp;</span>
@@ -83,13 +83,15 @@
                 <a class="parentMenu">用户管理</a>&nbsp;&nbsp;
                 <span class='pull-right'> + </span>
                 <div style="background-color: #DCDCDC;display: none;">
-                    <p><a href="/user/userAction_list.action" id="1" target="homeFrame">用户列表</a></p>
+                    <p><a href="${pageContext.request.contextPath}/user/userAction_list.action" id="1" target="homeFrame">用户列表</a></p>
                 </div>
             </li>
             <li>
                 <a class="parentMenu">审批流转</a>&nbsp;&nbsp;
                 <span class='pull-right'> + </span>
                 <div style="background-color: #DCDCDC;display: none;">
+                    <p><a href="${pageContext.request.contextPath}/workflowAction_workflow.action" id="105" target="homeFrame">流程定义列表</a></p>
+                    <%--<p><a href="${pageContext.request.contextPath}/workflowAction_design.action?modelId=1" id="12" target="homeFrame">流程设计图</a></p>--%>
                     <p><a href="right.html" id="2" target="homeFrame">我的待办</a></p>
                     <p><a href="right.html" id="3" target="homeFrame">请假申请</a></p>
                 </div>
