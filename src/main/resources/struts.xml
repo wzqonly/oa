@@ -22,4 +22,22 @@
             <result name="{1}">/WEB-INF/pages/home/{1}.jsp</result>
         </action>
     </package>
+
+    <package name="workflow" namespace="/" extends="struts-default,json-default">
+        <action name="workflowAction_*" class="workflowAction" method="{1}">
+            <result name="design">/modeler.html</result>
+            <result name="stencilset" type="json">
+                <param name="root">stencilset</param>
+            </result>
+            <result name="model" type="json">
+                <param name="root">map</param>
+            </result>
+            <result name="create" type="redirectAction">
+                <param name="actionName">workflowAction_design</param>
+                <param name="modelId">${modelData.id}</param>
+            </result>
+            <result name="workflow">/WEB-INF/pages/workflow/workflow.jsp</result>
+        </action>
+    </package>
+
 </struts>

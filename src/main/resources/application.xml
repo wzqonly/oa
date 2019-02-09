@@ -13,6 +13,7 @@
 
     <context:component-scan base-package="com.oa"></context:component-scan>
 
+
     <bean id="propertyConfigurer"
           class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
         <property name="location" value="classpath:jdbc.properties"/>
@@ -49,6 +50,8 @@
         </property>
 
     </bean>
+
+    <bean id="objectMapper" class="com.fasterxml.jackson.databind.ObjectMapper"></bean>
 
     <!-- hibernate 管理-->
     <bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">

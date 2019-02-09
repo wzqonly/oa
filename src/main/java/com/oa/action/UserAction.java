@@ -5,11 +5,13 @@ import com.oa.domain.ResponseResult;
 import com.oa.entity.Employee;
 import com.oa.service.IUserService;
 import org.apache.struts2.interceptor.ServletRequestAware;
+import org.apache.struts2.interceptor.ServletResponseAware;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 /**
@@ -83,4 +85,6 @@ public class UserAction implements ServletRequestAware{
     public void setServletRequest(HttpServletRequest httpServletRequest) {
         this.request = httpServletRequest;
     }
+
+
 }
