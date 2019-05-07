@@ -74,7 +74,7 @@ public class WorkFlowAction extends BaseAction implements ModelDataJsonConstants
     }
 
     public String stencilset(){
-        InputStream stencilsetStream = this.getClass().getClassLoader().getResourceAsStream("/activiti/stencilset_ch.json");
+        InputStream stencilsetStream = this.getClass().getClassLoader().getResourceAsStream("activiti/stencilset_ch.json");
         try {
             String stencilsetJson = IOUtils.toString(stencilsetStream, "utf-8");
             stencilset = new Gson().fromJson(stencilsetJson, new TypeToken<Map>() {}.getType());
